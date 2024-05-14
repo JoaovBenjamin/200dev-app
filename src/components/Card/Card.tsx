@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import Button from "../Button/Button";
+import { X } from "lucide-react";
 
 
 const CardContainer = styled.div`
@@ -9,6 +11,14 @@ const CardContainer = styled.div`
     height: 100vh; 
 `
 
+const DivImage = styled.div`
+    display: flex;
+    align-self: flex-end;
+    position: fixed;
+    margin-top: 25px;
+    margin-right: 20px;
+`
+
 const CardDiv = styled.div`
     display: flex;
     align-items: center;
@@ -16,8 +26,12 @@ const CardDiv = styled.div`
     width: 500px;
     height: 250px;
     background-color: #fff;
-    border: solid 2px blue;
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(to right, #ff007f, #8a2be2, #007bff);
+    border-image-slice: 1;
     border-radius: 10px;
+    
 `
 
 const Title = styled.h1`
@@ -26,7 +40,6 @@ const Title = styled.h1`
     align-self: flex-start;
     padding: 24px;
     margin: 24px,0,0,12px;
-    position: relative;
     
 ` 
 
@@ -45,7 +58,9 @@ export default function Card(){
             <CardContainer>
                 <CardDiv>
                     <Title>Lorem ipsum!</Title>
-                    <Paragraph>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa distinctio placeat recusandae iusto labore natus similique sint voluptate asperiores, vero molestias beatae consectetur quidem sapiente soluta! Recusandae qui aut illum?</Paragraph>                
+                    <DivImage><X></X></DivImage>
+                    <Paragraph>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa distinctio placeat recusandae iusto labore natus similique sint voluptate asperiores Recusandae qui aut illum?</Paragraph>  
+                    <Button></Button>              
                 </CardDiv>
             </CardContainer>
         </>
